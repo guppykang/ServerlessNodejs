@@ -1,8 +1,20 @@
 <template>
   <view class="container">
-    <text class="text-color-primary">My Vue Native App</text>
+  <text class="text-color-primary">{{msg}}</text>
   </view>
 </template>
+
+<script>
+export default {
+    data: function() {
+        return {
+            msg: "Hello World"
+        }
+    }
+}
+</script>
+
+
 
 <style>
 .container {
