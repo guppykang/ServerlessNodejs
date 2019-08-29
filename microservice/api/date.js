@@ -1,7 +1,15 @@
-const moment = require('moment')
+const moment = require('moment');
+const { mongoose } = require('../mongoose_connections');
 
-module.exports = (req, res) => {
-  const currentTime = moment().format('MMMM Do YYYY, h:mm:ss a')
+const dateSchema = new mongoose.Schema({
+  current : String
+ });
 
-  res.end(currentTime)
+const date = mongoose.model("Date", dateSchema);
+
+module.exports = async (req, res) => {
+  const currentTime = moment().format('MMMM Do YYYY, h:mm:ss a');
+  const uploadResponse = await date.create({ current : currentTime });
+  console.log('HIIIIII MOMMM')
+  res.end( currentTime );
 }
