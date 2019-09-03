@@ -9,4 +9,5 @@ module.exports = async (req, res) => {
   
   const date = mongoose.model("Date", dateSchema);
   return date;
+
 }
