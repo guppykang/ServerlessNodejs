@@ -1,3 +1,4 @@
+For personal use, must change now.json to be yours, setup now login , and setup the now sercrets for a database (in my case a mongodb)
 
 Zeit backend service in Microservices directory 
 Must create own .env file on your own. Ask admins for .env file for local development
